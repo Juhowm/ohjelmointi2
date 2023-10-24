@@ -1,9 +1,9 @@
 class Auto:
-    def __init__(self, rek, top, cur=0, dis=0):
+    def __init__(self, rek, top):
         self.rek = rek
         self.top = top
-        self.cur = cur
-        self.dis = dis
+        self.cur = 0
+        self.dis = 0
 
 
 newcar = Auto("ABC-123", 142)
