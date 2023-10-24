@@ -40,6 +40,10 @@ class Talo:
         liike = self.hissit[hissi]
         liike.siirry_kerrokseen(kohde)
 
+    def palohälytys(self):
+        for hissi in self.hissit:
+            hissi.siirry_kerrokseen(self.floormin)
+
 
 alin = int(input("Mikä on talon alin kerros? "))
 ylin = int(input("Mikä on talon ylin kerros? "))
@@ -50,4 +54,6 @@ while input("Haluatko liikkua hisseillä? Vastaa k jos kyllä. ") == "k":
     paik = int(input(f"Mihin kerrokseen haluat mennä (välillä {alin}-{ylin})? "))
     talo.aja_hissiä(val-1, paik)
 else:
-    print("Hyvästi")
+    print("Talossa on palohälytys! Kaikki hissit palaavat pohjakerrokseen!")
+    talo.palohälytys()
+
