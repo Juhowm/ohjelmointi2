@@ -7,14 +7,14 @@ class Hissi:
     def kerros_ylös(self):
         if self.floor < self.floormax:
             self.floor += 1
-            print(f"Olet nyt kerroksessa {self.floor}")
+            print(f"Hissi on nyt kerroksessa {self.floor}")
         elif self.floor == self.floormax:
             print(f"Olet jo ylimmässä kerroksessa {self.floor}")
 
     def kerros_alas(self):
         if self.floor > self.floormin:
             self.floor -= 1
-            print(f"Olet nyt kerroksessa {self.floor}")
+            print(f"Hissi on nyt kerroksessa {self.floor}")
         elif self.floor == self.floormin:
             print(f"Olet jo alimmasssa kerroksessa {self.floor}")
 
