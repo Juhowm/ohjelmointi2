@@ -27,6 +27,20 @@ class Hissi:
             self.kerros_ylös()
 
 
-hissi = Hissi(1, 5)
-hissi.siirry_kerrokseen(5)
-hissi.siirry_kerrokseen(1)
+class Talo:
+    def __init__(self, floormin, floormax, hissejä):
+        self.floormin = floormin
+        self.floormax = floormax
+        self.hissejä = hissejä
+        self.hissit = []
+        for n in range(hissejä):
+            self.hissit.append(Hissi(self.floormin, self.floormax))
+            print(self.hissit)
+
+    def aja_hissiä(self, hissi, kohde):
+        liike = self.hissit[hissi]
+        liike.siirry_kerrokseen(kohde)
+
+
+talo = Talo(1, 5, 3)
+talo.aja_hissiä(1, 4)
